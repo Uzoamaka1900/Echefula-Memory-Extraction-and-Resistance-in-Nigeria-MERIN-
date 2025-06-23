@@ -1,13 +1,5 @@
 ## 🗺️ Welcome to the **Echefùla: Memory, Extraction, and Resistance in Nigeria Project**
 
-<div style="
-  background: url('/assets/img/Afterlife-of-Extraction.jpg') no-repeat center center;
-  background-size: cover;
-  padding: 4rem;
-  color: white;
-  text-shadow: 1px 1px 2px black;
-  min-height: 100vh;
-">
 
 ### Afterlife of Extraction
 
@@ -52,4 +44,18 @@
 
 📌 Each sub-site includes a refined navigational structure, multiple pages, and project-specific metadata. The platform supports interactive maps, oral histories, topic modeling visualizations, and community-driven interpretation.
 
+<div style="
+  background: url('/assets/img/Afterlife-of-Extraction.jpg') no-repeat center center;
+  background-size: cover;
+  padding: 4rem;
+  color: white;
+  text-shadow: 1px 1px 2px black;
+  min-height: 100vh;
+">
+
+## Explore Projects
+
+- [Project 1](/CLAIRE Archive/)
+- [Project 2](/Mining Media Memory (MMM) Archive/)
+- [Project 3](/ACAIREN Archive/)
 
