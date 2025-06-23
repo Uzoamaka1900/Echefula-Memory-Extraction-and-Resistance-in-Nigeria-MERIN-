@@ -1,5 +1,25 @@
 ## 🗺️ Welcome to the **Echefùla: Memory, Extraction, and Resistance in Nigeria Project**
 
+<div style="
+  background: url('/assets/img/Afterlife-of-Extraction.jpg') no-repeat center center;
+  background-size: cover;
+  padding: 4rem;
+  color: white;
+  text-shadow: 1px 1px 2px black;
+  min-height: 100vh;
+">
+
+### Afterlife of Extraction
+
+> **“Afterlife of Extraction”**  
+> Beneath this soil lies more than ore—  
+> it holds memories of displacement, buried kinships, and fractured futures...  
+>  
+> _Echefùla_ (Do Not Forget) is a digital memory project tracing extraction, resistance, and archival ethics in Eastern Nigeria.
+
+</div>
+
+
 **Echefùla** is a collaborative digital platform comprising multi-archival sub-sites that examine the entangled legacies of mining, environmental intervention, and Indigenous resistance in Nigeria. Each project foregrounds spatial memory, oral testimony, media analysis, and community-based environmental histories.
 
 ---
