@@ -1,22 +1,21 @@
 ---
-title: MMM Archive
+title: CLAIRE Archive
 layout: default
-permalink: /project2/
+permalink: /project1/
 ---
 
-# Project 2: MMM Archive
+# Project 1: CLAIRE Archive
 
-Welcome to the **Mining Media Memory (MMM)** archive.
+Welcome to the **CLAIRE Archive** — *Cartographic Layered Archive of Indigenous Resistance and Extraction in Nigeria*.
 
-This archive documents how Nigeria's print media from 1935 to 2025 reported—or failed to report—on mining, labor, environmental degradation, and community resistance. Drawing on thousands of digitized articles and oral testimony, MMM reconstructs the historical memory and media silence around extraction.
+This collection explores how coal mining, land dispossession, and community displacement shaped Eastern Nigeria from the colonial period to the postcolonial present. CLAIRE maps out memory through crown land act, environmental impact records, and archival petitions to unearth narratives often buried beneath extractive infrastructures.
 
-MMM explores:
-- Digitized and annotated newspaper reports
-- Topic modeling of mining narratives
-- Visualization of reporting frequency across time and space
-- Interviews with journalists and mining-affected communities
+CLAIRE features:
+- Digitized petitions and colonial land acquisition reports
+- Interactive geospatial tools tracking claims and environmental harm
+- Memory maps created with local communities
 
-Part of the *Echefùla* digital collection, this project aims to challenge silences, surface subaltern perspectives, and inspire new ways of understanding press archives as political memory.
+This project centers community voices in the ongoing reckoning with the afterlives of coal mining in Enugu and beyond.
 
-- 📚 Read field updates on the [Blog](./blog.html)
-- 💬 Join the conversation via the [Discussion](./discussion.html)
+- 📚 Read reflections and fieldwork insights in the [Blog](./blog.html)
+- 💬 Contribute your perspective in the [Discussion](./discussion.html)
