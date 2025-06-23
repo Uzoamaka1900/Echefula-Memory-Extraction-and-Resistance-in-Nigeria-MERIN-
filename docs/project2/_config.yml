@@ -1,3 +1,9 @@
 title: MMM Archive
+tagline: Mining Media Memory in Nigeria, 1935–2025
 baseurl: "/project2"
-description: Documenting mining media and memory.
+description: A digital collection exploring Nigeria’s mining history through media, memory, and visual storytelling
+author: Uzoamaka Nwachukwu
+metadata: project2-metadata
+exclude: [README.md, Rakefile, LICENSE]
+sass:
+  style: compressed
