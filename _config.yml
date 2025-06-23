@@ -1,0 +1,15 @@
+title: Echefùla Coal Archive
+
+tagline: Memory and Mining in Eastern 
+
+baseurl: ""  # ROOT site has an empty baseurl
+
+description: "A digital project exploring Nigeria’s mining history through archival fragments, oral memory, and community resistance across extractive landscapes"
+
+author: Uzoamaka Nwachukwu
+
+metadata: Mining-metadata  # matches your main CSV filename in _data/
+
+exclude: [README.md, Rakefile, LICENSE, /project1/, /project2/]  # exclude other CB sites
+sass:
+  style: compressed

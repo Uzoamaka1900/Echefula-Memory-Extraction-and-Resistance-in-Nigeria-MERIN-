@@ -1,0 +1,15 @@
+title: ACAIREN archive
+
+tagline: ANTI-EROSION CAMPAIGN AND INDIGENOUS RESISTANCE IN EASTERN NIGERIA 
+
+baseurl: "/project3"
+
+description: "ACAIREN explores the intertwined histories of state-led erosion control campaigns and indigenous resistance strategies in southeastern Nigeria from the colonial period through the post-independence era. Centering gully erosion as both an ecological crisis and a political terrain, the project investigates how anti-erosion policies were used to impose bureaucratic control, extract labor, and transform rural landscapes under the guise of environmental protection."
+
+author: Uzoamaka Nwachukwu
+
+metadata: CLAIRE-metadata  # your corresponding metadata file
+
+exclude: [README.md, Rakefile, LICENSE]
+sass:
+  style: compressed

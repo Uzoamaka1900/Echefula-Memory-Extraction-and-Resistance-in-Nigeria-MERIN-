@@ -1,0 +1,15 @@
+title: Mining Media Memory Archive
+
+tagline: Colonial Land Acquisitin and Indigenous Resistance in Enugu Nigeria
+
+baseurl: "/project2"
+
+description: "MMM is a digital archive and research platform focused on the intersections of mining, media, and memory in Nigeria. The site documents how mining has been represented, contested, and remembered in Nigerian newspapers, community testimonies, and visual culture from the colonial period to the present."
+
+author: Uzoamaka Nwachukwu
+
+metadata: CLAIRE-metadata  # your corresponding metadata file
+
+exclude: [README.md, Rakefile, LICENSE]
+sass:
+  style: compressed
