@@ -1,3 +1,9 @@
 title: CLAIRE Archive
+tagline: Cartographic Layered Archive of Indigenous Resistance and Extraction in Nigeria
 baseurl: "/project1"
-description: Archive of community memory
+description: A participatory digital archive mapping the memory and legacies of mining in Eastern Nigeria
+author: Uzoamaka Nwachukwu
+metadata: project1-metadata
+exclude: [README.md, Rakefile, LICENSE]
+sass:
+  style: compressed
