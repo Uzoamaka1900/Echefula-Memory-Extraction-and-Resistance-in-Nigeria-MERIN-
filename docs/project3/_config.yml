@@ -1,3 +1,9 @@
 title: ACAIREN Archive
+tagline: Anti-Erosion Campaign and Indigenous Resistance in Eastern Nigeria
 baseurl: "/project3"
-description: Indigenous resistance and environmental activism.
+description: An archive documenting community resistance to erosion, land loss, and extractive development in Nigeria
+author: Uzoamaka Nwachukwu
+metadata: project3-metadata
+exclude: [README.md, Rakefile, LICENSE]
+sass:
+  style: compressed
