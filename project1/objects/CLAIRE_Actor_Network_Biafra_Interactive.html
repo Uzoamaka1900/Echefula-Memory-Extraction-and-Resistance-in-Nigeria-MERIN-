@@ -1,0 +1,179 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script src="lib/bindings/utils.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 100%;
+                 height: 800px;
+                 background-color: #222222;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+
+             
+             #config {
+                 float: left;
+                 width: 400px;
+                 height: 600px;
+             }
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+        
+            <div id="config"></div>
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"color": "orange", "font": {"color": "white"}, "id": "KEEP BIAFRA ALIVE! Opening", "label": "KEEP BIAFRA ALIVE! Opening", "shape": "box", "size": 50, "title": "\u003cb\u003eKEEP BIAFRA ALIVE! Opening\u003c/b\u003e\u003cbr\u003eDate: July 18, 1968\u003cbr\u003eLocation: 90th \u0026 Broadway, New York, N.Y.\u003cbr\u003eType: Storefront Opening"}, {"color": "teal", "font": {"color": "white"}, "id": "American Committee to Keep Biafra Alive", "label": "American Committee to Keep Biafra Alive", "shape": "ellipse", "size": 30, "title": "\u003cb\u003eAmerican Committee to Keep Biafra Alive\u003c/b\u003e"}, {"color": "orange", "font": {"color": "white"}, "id": "APPEAL FOR AN EMERGENCY AIR-LIFT", "label": "APPEAL FOR AN EMERGENCY AIR-LIFT", "shape": "box", "size": 50, "title": "\u003cb\u003eAPPEAL FOR AN EMERGENCY AIR-LIFT\u003c/b\u003e\u003cbr\u003eDate: July 27-29, 1968\u003cbr\u003eLocation: New York Times\u003cbr\u003eType: Advertisement"}, {"color": "orange", "font": {"color": "white"}, "id": "TAKE YOUR STAND ON THE LIFELINE FOR BIAFRA", "label": "TAKE YOUR STAND ON THE LIFELINE FOR BIAFRA", "shape": "box", "size": 50, "title": "\u003cb\u003eTAKE YOUR STAND ON THE LIFELINE FOR BIAFRA\u003c/b\u003e\u003cbr\u003eDate: August 8, 1968\u003cbr\u003eLocation: Dag Hammarskjold Plaza, New York, N.Y.\u003cbr\u003eType: Rally"}, {"color": "orange", "font": {"color": "white"}, "id": "APPEAL TO THE POPE", "label": "APPEAL TO THE POPE", "shape": "box", "size": 50, "title": "\u003cb\u003eAPPEAL TO THE POPE\u003c/b\u003e\u003cbr\u003eDate: August 17, 1968\u003cbr\u003eLocation: Vatican\u003cbr\u003eType: Delegation Visit"}, {"color": "teal", "font": {"color": "white"}, "id": "Melanie Nix", "label": "Melanie Nix", "shape": "ellipse", "size": 30, "title": "\u003cb\u003eMelanie Nix\u003c/b\u003e"}, {"color": "teal", "font": {"color": "white"}, "id": "Father Aloysius Dempsey", "label": "Father Aloysius Dempsey", "shape": "ellipse", "size": 30, "title": "\u003cb\u003eFather Aloysius Dempsey\u003c/b\u003e"}, {"color": "orange", "font": {"color": "white"}, "id": "DAY OF SORROW AND HOPE", "label": "DAY OF SORROW AND HOPE", "shape": "box", "size": 50, "title": "\u003cb\u003eDAY OF SORROW AND HOPE\u003c/b\u003e\u003cbr\u003eDate: August 18, 1968\u003cbr\u003eLocation: St. Thomas Episcopal Church, New York, N.Y.\u003cbr\u003eType: Interfaith Service"}, {"color": "teal", "font": {"color": "white"}, "id": "Interfaith clergy", "label": "Interfaith clergy", "shape": "ellipse", "size": 30, "title": "\u003cb\u003eInterfaith clergy\u003c/b\u003e"}, {"color": "orange", "font": {"color": "white"}, "id": "INFORMATION: BIAFRA\u2014YOU CAN\u0027T SAY YOU DIDN\u0027T KNOW", "label": "INFORMATION: BIAFRA\u2014YOU CAN\u0027T SAY YOU DIDN\u0027T KNOW", "shape": "box", "size": 50, "title": "\u003cb\u003eINFORMATION: BIAFRA\u2014YOU CAN\u0027T SAY YOU DIDN\u0027T KNOW\u003c/b\u003e\u003cbr\u003eDate: September 7, 1968\u003cbr\u003eLocation: Dag Hammarskjold Plaza, New York, N.Y.\u003cbr\u003eType: Exhibit"}, {"color": "orange", "font": {"color": "white"}, "id": "RALLY TO PROTEST GENOCIDE: SIX MILLION; NOT AGAIN!", "label": "RALLY TO PROTEST GENOCIDE: SIX MILLION; NOT AGAIN!", "shape": "box", "size": 50, "title": "\u003cb\u003eRALLY TO PROTEST GENOCIDE: SIX MILLION; NOT AGAIN!\u003c/b\u003e\u003cbr\u003eDate: September 14-16, 1968\u003cbr\u003eLocation: Dag Hammarskjold Plaza, New York, N.Y.\u003cbr\u003eType: Rally"}, {"color": "orange", "font": {"color": "white"}, "id": "DELEGATIONS TO UNITED NATIONS MISSIONS", "label": "DELEGATIONS TO UNITED NATIONS MISSIONS", "shape": "box", "size": 50, "title": "\u003cb\u003eDELEGATIONS TO UNITED NATIONS MISSIONS\u003c/b\u003e\u003cbr\u003eDate: September 1968\u003cbr\u003eLocation: United Nations, New York, N.Y.\u003cbr\u003eType: Delegation Visit"}, {"color": "teal", "font": {"color": "white"}, "id": "Edward K. Thompson", "label": "Edward K. Thompson", "shape": "ellipse", "size": 30, "title": "\u003cb\u003eEdward K. Thompson\u003c/b\u003e"}, {"color": "teal", "font": {"color": "white"}, "id": "Yale Professor Richard Neustadt", "label": "Yale Professor Richard Neustadt", "shape": "ellipse", "size": 30, "title": "\u003cb\u003eYale Professor Richard Neustadt\u003c/b\u003e"}, {"color": "orange", "font": {"color": "white"}, "id": "TEN DAY SIT-IN AT UNITED STATES MISSION", "label": "TEN DAY SIT-IN AT UNITED STATES MISSION", "shape": "box", "size": 50, "title": "\u003cb\u003eTEN DAY SIT-IN AT UNITED STATES MISSION\u003c/b\u003e\u003cbr\u003eDate: September 1968\u003cbr\u003eLocation: U.S. Mission to the U.N., New York, N.Y.\u003cbr\u003eType: Sit-in Protest"}, {"color": "orange", "font": {"color": "white"}, "id": "DELEGATION TO SENATOR GOODDELL", "label": "DELEGATION TO SENATOR GOODDELL", "shape": "box", "size": 50, "title": "\u003cb\u003eDELEGATION TO SENATOR GOODDELL\u003c/b\u003e\u003cbr\u003eDate: September 1968\u003cbr\u003eLocation: New York, N.Y.\u003cbr\u003eType: Delegation Visit"}, {"color": "orange", "font": {"color": "white"}, "id": "MERCY FLIGHT TO BIAFRA", "label": "MERCY FLIGHT TO BIAFRA", "shape": "box", "size": 50, "title": "\u003cb\u003eMERCY FLIGHT TO BIAFRA\u003c/b\u003e\u003cbr\u003eDate: September 29, 1968\u003cbr\u003eLocation: Biafra\u003cbr\u003eType: Air Relief Effort"}, {"color": "orange", "font": {"color": "white"}, "id": "NATIONAL VIGIL LIFELINES FOR BIAFRA", "label": "NATIONAL VIGIL LIFELINES FOR BIAFRA", "shape": "box", "size": 50, "title": "\u003cb\u003eNATIONAL VIGIL LIFELINES FOR BIAFRA\u003c/b\u003e\u003cbr\u003eDate: October 25-26, 1968\u003cbr\u003eLocation: Interfaith Service, St. Patrick\u2019s Cathedral, NYC\u003cbr\u003eType: Vigil"}, {"color": "orange", "font": {"color": "white"}, "id": "COMMITTEE ANNOUNCES SUPPORT FOR RECOGNITION OF BIAFRA", "label": "COMMITTEE ANNOUNCES SUPPORT FOR RECOGNITION OF BIAFRA", "shape": "box", "size": 50, "title": "\u003cb\u003eCOMMITTEE ANNOUNCES SUPPORT FOR RECOGNITION OF BIAFRA\u003c/b\u003e\u003cbr\u003eDate: November 14, 1968\u003cbr\u003eLocation: New York, N.Y.\u003cbr\u003eType: Statement"}, {"color": "orange", "font": {"color": "white"}, "id": "INTERNATIONAL CONFERENCE ON BIAFRA", "label": "INTERNATIONAL CONFERENCE ON BIAFRA", "shape": "box", "size": 50, "title": "\u003cb\u003eINTERNATIONAL CONFERENCE ON BIAFRA\u003c/b\u003e\u003cbr\u003eDate: December 6-8, 1968\u003cbr\u003eLocation: Columbia University, New York, N.Y.\u003cbr\u003eType: Conference"}, {"color": "teal", "font": {"color": "white"}, "id": "Academics", "label": "Academics", "shape": "ellipse", "size": 30, "title": "\u003cb\u003eAcademics\u003c/b\u003e"}, {"color": "teal", "font": {"color": "white"}, "id": "Activists", "label": "Activists", "shape": "ellipse", "size": 30, "title": "\u003cb\u003eActivists\u003c/b\u003e"}, {"color": "orange", "font": {"color": "white"}, "id": "FACT FINDING MISSION TO BIAFRA", "label": "FACT FINDING MISSION TO BIAFRA", "shape": "box", "size": 50, "title": "\u003cb\u003eFACT FINDING MISSION TO BIAFRA\u003c/b\u003e\u003cbr\u003eDate: January 16-23, 1969\u003cbr\u003eLocation: Biafra\u003cbr\u003eType: Fact-Finding"}, {"color": "orange", "font": {"color": "white"}, "id": "RECOGNIZE BIAFRA AD", "label": "RECOGNIZE BIAFRA AD", "shape": "box", "size": 50, "title": "\u003cb\u003eRECOGNIZE BIAFRA AD\u003c/b\u003e\u003cbr\u003eDate: January 21, 1969\u003cbr\u003eLocation: New York Times\u003cbr\u003eType: Advertisement"}, {"color": "orange", "font": {"color": "white"}, "id": "DEMONSTRATION WASHINGTON NIGERIAN CONSULATE", "label": "DEMONSTRATION WASHINGTON NIGERIAN CONSULATE", "shape": "box", "size": 50, "title": "\u003cb\u003eDEMONSTRATION WASHINGTON NIGERIAN CONSULATE\u003c/b\u003e\u003cbr\u003eDate: February 17, 1969\u003cbr\u003eLocation: Washington, D.C.\u003cbr\u003eType: Demonstration"}, {"color": "orange", "font": {"color": "white"}, "id": "DEMONSTRATION", "label": "DEMONSTRATION", "shape": "box", "size": 50, "title": "\u003cb\u003eDEMONSTRATION\u003c/b\u003e\u003cbr\u003eDate: April 1, 1969\u003cbr\u003eLocation: New York Times offices, New York, N.Y.\u003cbr\u003eType: Demonstration"}, {"color": "orange", "font": {"color": "white"}, "id": "BIAFRA DAY", "label": "BIAFRA DAY", "shape": "box", "size": 50, "title": "\u003cb\u003eBIAFRA DAY\u003c/b\u003e\u003cbr\u003eDate: May 30, 1969\u003cbr\u003eLocation: New York, N.Y.\u003cbr\u003eType: Commemoration"}, {"color": "teal", "font": {"color": "white"}, "id": "Rick Johnson", "label": "Rick Johnson", "shape": "ellipse", "size": 30, "title": "\u003cb\u003eRick Johnson\u003c/b\u003e"}, {"color": "teal", "font": {"color": "white"}, "id": "American Committee", "label": "American Committee", "shape": "ellipse", "size": 30, "title": "\u003cb\u003eAmerican Committee\u003c/b\u003e"}, {"color": "orange", "font": {"color": "white"}, "id": "BIAFRA HOUSE OPENING", "label": "BIAFRA HOUSE OPENING", "shape": "box", "size": 50, "title": "\u003cb\u003eBIAFRA HOUSE OPENING\u003c/b\u003e\u003cbr\u003eDate: November 24, 1969\u003cbr\u003eLocation: 346 E. 76th Street, New York, N.Y.\u003cbr\u003eType: Storefront Opening"}, {"color": "teal", "font": {"color": "white"}, "id": "Paul O\u0027Dwyer", "label": "Paul O\u0027Dwyer", "shape": "ellipse", "size": 30, "title": "\u003cb\u003ePaul O\u0027Dwyer\u003c/b\u003e"}, {"color": "teal", "font": {"color": "white"}, "id": "Carter Burden", "label": "Carter Burden", "shape": "ellipse", "size": 30, "title": "\u003cb\u003eCarter Burden\u003c/b\u003e"}, {"color": "orange", "font": {"color": "white"}, "id": "PEACE FOR BIAFRA VIGIL", "label": "PEACE FOR BIAFRA VIGIL", "shape": "box", "size": 50, "title": "\u003cb\u003ePEACE FOR BIAFRA VIGIL\u003c/b\u003e\u003cbr\u003eDate: December 30, 1969\u003cbr\u003eLocation: British Consulate, NYC\u003cbr\u003eType: Vigil"}, {"color": "orange", "font": {"color": "white"}, "id": "BIAFRANS NEED YOUR HELP Demonstration", "label": "BIAFRANS NEED YOUR HELP Demonstration", "shape": "box", "size": 50, "title": "\u003cb\u003eBIAFRANS NEED YOUR HELP Demonstration\u003c/b\u003e\u003cbr\u003eDate: January 13, 1970\u003cbr\u003eLocation: Dag Hammarskjold Plaza, New York, N.Y.\u003cbr\u003eType: Demonstration"}, {"color": "orange", "font": {"color": "white"}, "id": "DEMONSTRATION DURING HAROLD WILSON VISIT", "label": "DEMONSTRATION DURING HAROLD WILSON VISIT", "shape": "box", "size": 50, "title": "\u003cb\u003eDEMONSTRATION DURING HAROLD WILSON VISIT\u003c/b\u003e\u003cbr\u003eDate: January 27-28, 1970\u003cbr\u003eLocation: Washington, D.C.\u003cbr\u003eType: Demonstration"}, {"color": "orange", "font": {"color": "white"}, "id": "Senator Eugene McCarthy Statement on Biafra", "label": "Senator Eugene McCarthy Statement on Biafra", "shape": "box", "size": 50, "title": "\u003cb\u003eSenator Eugene McCarthy Statement on Biafra\u003c/b\u003e\u003cbr\u003eDate: May 16, 1969\u003cbr\u003eLocation: Washington, D.C.\u003cbr\u003eType: Political Statement"}, {"color": "teal", "font": {"color": "white"}, "id": "Senator Eugene J. McCarthy", "label": "Senator Eugene J. McCarthy", "shape": "ellipse", "size": 30, "title": "\u003cb\u003eSenator Eugene J. McCarthy\u003c/b\u003e"}, {"color": "orange", "font": {"color": "white"}, "id": "Biafra\u0027s Women by Paul Connett", "label": "Biafra\u0027s Women by Paul Connett", "shape": "box", "size": 50, "title": "\u003cb\u003eBiafra\u0027s Women by Paul Connett\u003c/b\u003e\u003cbr\u003eDate: May 1969\u003cbr\u003eLocation: Biafra\u003cbr\u003eType: Report"}, {"color": "teal", "font": {"color": "white"}, "id": "Paul Connett", "label": "Paul Connett", "shape": "ellipse", "size": 30, "title": "\u003cb\u003ePaul Connett\u003c/b\u003e"}, {"color": "orange", "font": {"color": "white"}, "id": "Memorandum on U.S. Biafra Policy", "label": "Memorandum on U.S. Biafra Policy", "shape": "box", "size": 50, "title": "\u003cb\u003eMemorandum on U.S. Biafra Policy\u003c/b\u003e\u003cbr\u003eDate: June 11, 1969\u003cbr\u003eLocation: United States\u003cbr\u003eType: Memorandum"}, {"color": "teal", "font": {"color": "white"}, "id": "St. Louis Committee to Keep Biafrans Alive", "label": "St. Louis Committee to Keep Biafrans Alive", "shape": "ellipse", "size": 30, "title": "\u003cb\u003eSt. Louis Committee to Keep Biafrans Alive\u003c/b\u003e"}, {"color": "teal", "font": {"color": "white"}, "id": "U.S. Congress", "label": "U.S. Congress", "shape": "ellipse", "size": 30, "title": "\u003cb\u003eU.S. Congress\u003c/b\u003e"}, {"color": "orange", "font": {"color": "white"}, "id": "Biafra Report - Mango Seedling Poem by Chinua Achebe", "label": "Biafra Report - Mango Seedling Poem by Chinua Achebe", "shape": "box", "size": 50, "title": "\u003cb\u003eBiafra Report - Mango Seedling Poem by Chinua Achebe\u003c/b\u003e\u003cbr\u003eDate: May 1969\u003cbr\u003eLocation: United States / Biafra\u003cbr\u003eType: Publication / Poetry"}, {"color": "teal", "font": {"color": "white"}, "id": "Chinua Achebe", "label": "Chinua Achebe", "shape": "ellipse", "size": 30, "title": "\u003cb\u003eChinua Achebe\u003c/b\u003e"}]);
+                  edges = new vis.DataSet([{"color": "gray", "from": "American Committee to Keep Biafra Alive", "to": "KEEP BIAFRA ALIVE! Opening"}, {"color": "gray", "from": "American Committee to Keep Biafra Alive", "to": "APPEAL FOR AN EMERGENCY AIR-LIFT"}, {"color": "gray", "from": "American Committee to Keep Biafra Alive", "to": "TAKE YOUR STAND ON THE LIFELINE FOR BIAFRA"}, {"color": "gray", "from": "Melanie Nix", "to": "APPEAL TO THE POPE"}, {"color": "gray", "from": "Father Aloysius Dempsey", "to": "APPEAL TO THE POPE"}, {"color": "gray", "from": "Interfaith clergy", "to": "DAY OF SORROW AND HOPE"}, {"color": "gray", "from": "American Committee to Keep Biafra Alive", "to": "INFORMATION: BIAFRA\u2014YOU CAN\u0027T SAY YOU DIDN\u0027T KNOW"}, {"color": "gray", "from": "American Committee to Keep Biafra Alive", "to": "RALLY TO PROTEST GENOCIDE: SIX MILLION; NOT AGAIN!"}, {"color": "gray", "from": "Edward K. Thompson", "to": "DELEGATIONS TO UNITED NATIONS MISSIONS"}, {"color": "gray", "from": "Yale Professor Richard Neustadt", "to": "DELEGATIONS TO UNITED NATIONS MISSIONS"}, {"color": "gray", "from": "American Committee to Keep Biafra Alive", "to": "TEN DAY SIT-IN AT UNITED STATES MISSION"}, {"color": "gray", "from": "American Committee to Keep Biafra Alive", "to": "DELEGATION TO SENATOR GOODDELL"}, {"color": "gray", "from": "American Committee to Keep Biafra Alive", "to": "MERCY FLIGHT TO BIAFRA"}, {"color": "gray", "from": "Interfaith clergy", "to": "NATIONAL VIGIL LIFELINES FOR BIAFRA"}, {"color": "gray", "from": "American Committee to Keep Biafra Alive", "to": "COMMITTEE ANNOUNCES SUPPORT FOR RECOGNITION OF BIAFRA"}, {"color": "gray", "from": "Academics", "to": "INTERNATIONAL CONFERENCE ON BIAFRA"}, {"color": "gray", "from": "Activists", "to": "INTERNATIONAL CONFERENCE ON BIAFRA"}, {"color": "gray", "from": "Edward K. Thompson", "to": "FACT FINDING MISSION TO BIAFRA"}, {"color": "gray", "from": "American Committee to Keep Biafra Alive", "to": "RECOGNIZE BIAFRA AD"}, {"color": "gray", "from": "American Committee to Keep Biafra Alive", "to": "DEMONSTRATION WASHINGTON NIGERIAN CONSULATE"}, {"color": "gray", "from": "American Committee to Keep Biafra Alive", "to": "DEMONSTRATION"}, {"color": "gray", "from": "Rick Johnson", "to": "BIAFRA DAY"}, {"color": "gray", "from": "American Committee", "to": "BIAFRA DAY"}, {"color": "gray", "from": "Paul O\u0027Dwyer", "to": "BIAFRA HOUSE OPENING"}, {"color": "gray", "from": "Carter Burden", "to": "BIAFRA HOUSE OPENING"}, {"color": "gray", "from": "American Committee to Keep Biafra Alive", "to": "PEACE FOR BIAFRA VIGIL"}, {"color": "gray", "from": "American Committee to Keep Biafra Alive", "to": "BIAFRANS NEED YOUR HELP Demonstration"}, {"color": "gray", "from": "American Committee to Keep Biafra Alive", "to": "DEMONSTRATION DURING HAROLD WILSON VISIT"}, {"color": "gray", "from": "Senator Eugene J. McCarthy", "to": "Senator Eugene McCarthy Statement on Biafra"}, {"color": "gray", "from": "American Committee to Keep Biafra Alive", "to": "Senator Eugene McCarthy Statement on Biafra"}, {"color": "gray", "from": "Paul Connett", "to": "Biafra\u0027s Women by Paul Connett"}, {"color": "gray", "from": "American Committee to Keep Biafra Alive", "to": "Biafra\u0027s Women by Paul Connett"}, {"color": "gray", "from": "St. Louis Committee to Keep Biafrans Alive", "to": "Memorandum on U.S. Biafra Policy"}, {"color": "gray", "from": "U.S. Congress", "to": "Memorandum on U.S. Biafra Policy"}, {"color": "gray", "from": "Chinua Achebe", "to": "Biafra Report - Mango Seedling Poem by Chinua Achebe"}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {
+    "configure": {
+        "enabled": true,
+        "filter": [
+            "physics"
+        ]
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": true,
+            "type": "dynamic"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "enabled": true,
+        "forceAtlas2Based": {
+            "avoidOverlap": 0,
+            "centralGravity": 0.01,
+            "damping": 0.9,
+            "gravitationalConstant": -50,
+            "springConstant": 0.1,
+            "springLength": 250
+        },
+        "solver": "forceAtlas2Based",
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+
+                  
+
+
+                  
+                  // if this network requires displaying the configure window,
+                  // put it in its div
+                  options.configure["container"] = document.getElementById("config");
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+
+
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    </body>
+</html>

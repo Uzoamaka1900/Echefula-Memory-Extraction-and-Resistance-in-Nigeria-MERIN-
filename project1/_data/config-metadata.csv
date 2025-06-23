@@ -1,0 +1,14 @@
+1,field,display_name,browse_link,external_link
+2,title,Title,,
+3,creator,Author,TRUE,
+4,translator,Translator,TRUE,
+5,date,Publication Date,
+6,publisher,Publisher,,
+7,location,Place of Publication
+8,year,Year,,
+9,dimensions,Dimensions,,
+10,language,Language,,
+11,source,Source,,
+12,identifier,Source Identifier,,
+13,rights,Rights,,
+14,rightsstatement,Rights Statement,TRUE,TRUE

@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_12c3c5765977a64ad3f1ba7fb4eb7ea9 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdn.jsdelivr.net/npm/leaflet-textpath@1.2.3/leaflet.textpath.min.js"></script>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_12c3c5765977a64ad3f1ba7fb4eb7ea9" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_12c3c5765977a64ad3f1ba7fb4eb7ea9 = L.map(
+                "map_12c3c5765977a64ad3f1ba7fb4eb7ea9",
+                {
+                    center: [20.0, 0.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 2,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_40806869389be03b4eb80ece7658e559 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_40806869389be03b4eb80ece7658e559.addTo(map_12c3c5765977a64ad3f1ba7fb4eb7ea9);
+        
+    
+            var circle_marker_310277a476f3a2fe3f39578196b49c67 = L.circleMarker(
+                [40.7128, -74.006],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_12c3c5765977a64ad3f1ba7fb4eb7ea9);
+        
+    
+        var popup_bc0aaa07a41786b0bbf06d709e156c7b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_5bef15afe7af08dec5b8ca77e6e6a018 = $(`<div id="html_5bef15afe7af08dec5b8ca77e6e6a018" style="width: 100.0%; height: 100.0%;"><b>New York, N.Y.</b></div>`)[0];
+                popup_bc0aaa07a41786b0bbf06d709e156c7b.setContent(html_5bef15afe7af08dec5b8ca77e6e6a018);
+            
+        
+
+        circle_marker_310277a476f3a2fe3f39578196b49c67.bindPopup(popup_bc0aaa07a41786b0bbf06d709e156c7b)
+        ;
+
+        
+    
+    
+            var circle_marker_e1d019ee5b7ffda772af455adc671738 = L.circleMarker(
+                [38.9072, -77.0369],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_12c3c5765977a64ad3f1ba7fb4eb7ea9);
+        
+    
+        var popup_9369f0db596bef240f23ef53e6ba68d7 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_9475dce25a200cec1e33d72d7b19da60 = $(`<div id="html_9475dce25a200cec1e33d72d7b19da60" style="width: 100.0%; height: 100.0%;"><b>Washington, D.C.</b></div>`)[0];
+                popup_9369f0db596bef240f23ef53e6ba68d7.setContent(html_9475dce25a200cec1e33d72d7b19da60);
+            
+        
+
+        circle_marker_e1d019ee5b7ffda772af455adc671738.bindPopup(popup_9369f0db596bef240f23ef53e6ba68d7)
+        ;
+
+        
+    
+    
+            var circle_marker_361dba6693753a773fa9f89439326ef1 = L.circleMarker(
+                [51.5074, -0.1278],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_12c3c5765977a64ad3f1ba7fb4eb7ea9);
+        
+    
+        var popup_512f4129119e9ac9c0ecb733aa88af25 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6396bbd84499f6fa2d001568e2d852ac = $(`<div id="html_6396bbd84499f6fa2d001568e2d852ac" style="width: 100.0%; height: 100.0%;"><b>London, UK</b></div>`)[0];
+                popup_512f4129119e9ac9c0ecb733aa88af25.setContent(html_6396bbd84499f6fa2d001568e2d852ac);
+            
+        
+
+        circle_marker_361dba6693753a773fa9f89439326ef1.bindPopup(popup_512f4129119e9ac9c0ecb733aa88af25)
+        ;
+
+        
+    
+    
+            var circle_marker_48f080c6c32b94f34eebe85bdab5b459 = L.circleMarker(
+                [41.9029, 12.4534],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_12c3c5765977a64ad3f1ba7fb4eb7ea9);
+        
+    
+        var popup_8e5fa1b3fc7f3605eb80a278efad3413 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_41b139f1496f86ea0d8bf82c55f4c109 = $(`<div id="html_41b139f1496f86ea0d8bf82c55f4c109" style="width: 100.0%; height: 100.0%;"><b>Vatican</b></div>`)[0];
+                popup_8e5fa1b3fc7f3605eb80a278efad3413.setContent(html_41b139f1496f86ea0d8bf82c55f4c109);
+            
+        
+
+        circle_marker_48f080c6c32b94f34eebe85bdab5b459.bindPopup(popup_8e5fa1b3fc7f3605eb80a278efad3413)
+        ;
+
+        
+    
+    
+            var circle_marker_9d613b7d59d598408b85a5caf3256e26 = L.circleMarker(
+                [6.5244, 7.517],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_12c3c5765977a64ad3f1ba7fb4eb7ea9);
+        
+    
+        var popup_9867350401f68d16d84be121411f6d60 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c104122be4dbc5e5cae279e58fb9e7af = $(`<div id="html_c104122be4dbc5e5cae279e58fb9e7af" style="width: 100.0%; height: 100.0%;"><b>Biafra</b></div>`)[0];
+                popup_9867350401f68d16d84be121411f6d60.setContent(html_c104122be4dbc5e5cae279e58fb9e7af);
+            
+        
+
+        circle_marker_9d613b7d59d598408b85a5caf3256e26.bindPopup(popup_9867350401f68d16d84be121411f6d60)
+        ;
+
+        
+    
+    
+            var circle_marker_6ff7cdef27e3ce35f85fc2b2f6356429 = L.circleMarker(
+                [48.8566, 2.3522],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_12c3c5765977a64ad3f1ba7fb4eb7ea9);
+        
+    
+        var popup_a07655b34dc9af08d35502f733f92261 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_9dc85708ab8537ebf9f15b4dea57c5a0 = $(`<div id="html_9dc85708ab8537ebf9f15b4dea57c5a0" style="width: 100.0%; height: 100.0%;"><b>Paris, France</b></div>`)[0];
+                popup_a07655b34dc9af08d35502f733f92261.setContent(html_9dc85708ab8537ebf9f15b4dea57c5a0);
+            
+        
+
+        circle_marker_6ff7cdef27e3ce35f85fc2b2f6356429.bindPopup(popup_a07655b34dc9af08d35502f733f92261)
+        ;
+
+        
+    
+    
+            var circle_marker_6eda48db9b486843b7cc2f5f9a6d1677 = L.circleMarker(
+                [5.3453, -4.0244],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_12c3c5765977a64ad3f1ba7fb4eb7ea9);
+        
+    
+        var popup_2d433052abd30f4217148f3ba3186d47 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_2086fa3015186c67d02bd582fcfe0833 = $(`<div id="html_2086fa3015186c67d02bd582fcfe0833" style="width: 100.0%; height: 100.0%;"><b>Abidjan</b></div>`)[0];
+                popup_2d433052abd30f4217148f3ba3186d47.setContent(html_2086fa3015186c67d02bd582fcfe0833);
+            
+        
+
+        circle_marker_6eda48db9b486843b7cc2f5f9a6d1677.bindPopup(popup_2d433052abd30f4217148f3ba3186d47)
+        ;
+
+        
+    
+    
+            var poly_line_d2307969ab7a9d9489081d5ba38f8d6a = L.polyline(
+                [[40.7128, -74.006], [38.9072, -77.0369]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 6}
+            ).addTo(map_12c3c5765977a64ad3f1ba7fb4eb7ea9);
+        
+    
+        var popup_2edbaf7aa884c98a20dec01ee3d4f9f0 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6920f900fc13a9f7e50d523dc2e907fd = $(`<div id="html_6920f900fc13a9f7e50d523dc2e907fd" style="width: 100.0%; height: 100.0%;"><b>From:</b> New York, N.Y.<br><b>To:</b> Washington, D.C.<br><b>Date:</b> July 1968<br><b>Description:</b> Advocacy at U.S. Government</div>`)[0];
+                popup_2edbaf7aa884c98a20dec01ee3d4f9f0.setContent(html_6920f900fc13a9f7e50d523dc2e907fd);
+            
+        
+
+        poly_line_d2307969ab7a9d9489081d5ba38f8d6a.bindPopup(popup_2edbaf7aa884c98a20dec01ee3d4f9f0)
+        ;
+
+        
+    
+    
+            poly_line_d2307969ab7a9d9489081d5ba38f8d6a.bindTooltip(
+                `<div>
+                     New York, N.Y. ➔ Washington, D.C. (July 1968)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            poly_line_d2307969ab7a9d9489081d5ba38f8d6a.setText(
+                " \u27a4 ",
+                {
+  "repeat": true,
+  "center": false,
+  "below": false,
+  "offset": 7,
+  "orientation": 0,
+  "attributes": {
+  "fill": "blue",
+  "font-weight": "bold",
+  "font-size": "20px",
+},
+}
+            );
+        
+    
+            var poly_line_74a0ff0b2d647149bb721ef4a1b3596c = L.polyline(
+                [[40.7128, -74.006], [51.5074, -0.1278]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 6}
+            ).addTo(map_12c3c5765977a64ad3f1ba7fb4eb7ea9);
+        
+    
+        var popup_2173d8dc73e163bc0050f6ee2cb1185e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_5e22b48d0773dd5ebadb05188f14cb6b = $(`<div id="html_5e22b48d0773dd5ebadb05188f14cb6b" style="width: 100.0%; height: 100.0%;"><b>From:</b> New York, N.Y.<br><b>To:</b> London, UK<br><b>Date:</b> August 1968<br><b>Description:</b> Press Campaigns in UK</div>`)[0];
+                popup_2173d8dc73e163bc0050f6ee2cb1185e.setContent(html_5e22b48d0773dd5ebadb05188f14cb6b);
+            
+        
+
+        poly_line_74a0ff0b2d647149bb721ef4a1b3596c.bindPopup(popup_2173d8dc73e163bc0050f6ee2cb1185e)
+        ;
+
+        
+    
+    
+            poly_line_74a0ff0b2d647149bb721ef4a1b3596c.bindTooltip(
+                `<div>
+                     New York, N.Y. ➔ London, UK (August 1968)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            poly_line_74a0ff0b2d647149bb721ef4a1b3596c.setText(
+                " \u27a4 ",
+                {
+  "repeat": true,
+  "center": false,
+  "below": false,
+  "offset": 7,
+  "orientation": 0,
+  "attributes": {
+  "fill": "blue",
+  "font-weight": "bold",
+  "font-size": "20px",
+},
+}
+            );
+        
+    
+            var poly_line_6a5b9af9d96e643557db23d1d60bd4e8 = L.polyline(
+                [[51.5074, -0.1278], [6.5244, 7.517]],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 6}
+            ).addTo(map_12c3c5765977a64ad3f1ba7fb4eb7ea9);
+        
+    
+        var popup_a5101b4b1d749b44080429751ec77386 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_262fa94a59b8b9c26cf6fa71aa3452b6 = $(`<div id="html_262fa94a59b8b9c26cf6fa71aa3452b6" style="width: 100.0%; height: 100.0%;"><b>From:</b> London, UK<br><b>To:</b> Biafra<br><b>Date:</b> September 1968<br><b>Description:</b> Humanitarian Aid via Airlift</div>`)[0];
+                popup_a5101b4b1d749b44080429751ec77386.setContent(html_262fa94a59b8b9c26cf6fa71aa3452b6);
+            
+        
+
+        poly_line_6a5b9af9d96e643557db23d1d60bd4e8.bindPopup(popup_a5101b4b1d749b44080429751ec77386)
+        ;
+
+        
+    
+    
+            poly_line_6a5b9af9d96e643557db23d1d60bd4e8.bindTooltip(
+                `<div>
+                     London, UK ➔ Biafra (September 1968)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            poly_line_6a5b9af9d96e643557db23d1d60bd4e8.setText(
+                " \u27a4 ",
+                {
+  "repeat": true,
+  "center": false,
+  "below": false,
+  "offset": 7,
+  "orientation": 0,
+  "attributes": {
+  "fill": "purple",
+  "font-weight": "bold",
+  "font-size": "20px",
+},
+}
+            );
+        
+    
+            var poly_line_6dac22b66fdca6c7043b5c7245a52670 = L.polyline(
+                [[38.9072, -77.0369], [41.9029, 12.4534]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 6}
+            ).addTo(map_12c3c5765977a64ad3f1ba7fb4eb7ea9);
+        
+    
+        var popup_678b63ca2d815d834df7cfcde308ee81 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_93f7c402f97f741d6d13c201868b7075 = $(`<div id="html_93f7c402f97f741d6d13c201868b7075" style="width: 100.0%; height: 100.0%;"><b>From:</b> Washington, D.C.<br><b>To:</b> Vatican<br><b>Date:</b> August 1968<br><b>Description:</b> Diplomatic Appeal to the Pope</div>`)[0];
+                popup_678b63ca2d815d834df7cfcde308ee81.setContent(html_93f7c402f97f741d6d13c201868b7075);
+            
+        
+
+        poly_line_6dac22b66fdca6c7043b5c7245a52670.bindPopup(popup_678b63ca2d815d834df7cfcde308ee81)
+        ;
+
+        
+    
+    
+            poly_line_6dac22b66fdca6c7043b5c7245a52670.bindTooltip(
+                `<div>
+                     Washington, D.C. ➔ Vatican (August 1968)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            poly_line_6dac22b66fdca6c7043b5c7245a52670.setText(
+                " \u27a4 ",
+                {
+  "repeat": true,
+  "center": false,
+  "below": false,
+  "offset": 7,
+  "orientation": 0,
+  "attributes": {
+  "fill": "green",
+  "font-weight": "bold",
+  "font-size": "20px",
+},
+}
+            );
+        
+    
+            var poly_line_fe68bed3ff81b7f232ac7106c548a6ba = L.polyline(
+                [[48.8566, 2.3522], [6.5244, 7.517]],
+                {"bubblingMouseEvents": true, "color": "pink", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "pink", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 6}
+            ).addTo(map_12c3c5765977a64ad3f1ba7fb4eb7ea9);
+        
+    
+        var popup_5ae2b32c9030bff1b3e0be8286bb0e2f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c5f8d1208c1a93df669f7b80463c7f27 = $(`<div id="html_c5f8d1208c1a93df669f7b80463c7f27" style="width: 100.0%; height: 100.0%;"><b>From:</b> Paris, France<br><b>To:</b> Biafra<br><b>Date:</b> November 1969<br><b>Description:</b> French Humanitarian Aid and Political Support</div>`)[0];
+                popup_5ae2b32c9030bff1b3e0be8286bb0e2f.setContent(html_c5f8d1208c1a93df669f7b80463c7f27);
+            
+        
+
+        poly_line_fe68bed3ff81b7f232ac7106c548a6ba.bindPopup(popup_5ae2b32c9030bff1b3e0be8286bb0e2f)
+        ;
+
+        
+    
+    
+            poly_line_fe68bed3ff81b7f232ac7106c548a6ba.bindTooltip(
+                `<div>
+                     Paris, France ➔ Biafra (November 1969)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            poly_line_fe68bed3ff81b7f232ac7106c548a6ba.setText(
+                " \u27a4 ",
+                {
+  "repeat": true,
+  "center": false,
+  "below": false,
+  "offset": 7,
+  "orientation": 0,
+  "attributes": {
+  "fill": "pink",
+  "font-weight": "bold",
+  "font-size": "20px",
+},
+}
+            );
+        
+    
+            var poly_line_95477ae4b0c532d8f7bfb4e18d2aee85 = L.polyline(
+                [[5.3453, -4.0244], [6.5244, 7.517]],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "yellow", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 6}
+            ).addTo(map_12c3c5765977a64ad3f1ba7fb4eb7ea9);
+        
+    
+        var popup_852dcc1f03ecd194a0177bffa85cad10 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_465ca4c7129874092ca58588337ce076 = $(`<div id="html_465ca4c7129874092ca58588337ce076" style="width: 100.0%; height: 100.0%;"><b>From:</b> Abidjan<br><b>To:</b> Biafra<br><b>Date:</b> July 1969<br><b>Description:</b> Ivory Coast Backed Biafran Recognition</div>`)[0];
+                popup_852dcc1f03ecd194a0177bffa85cad10.setContent(html_465ca4c7129874092ca58588337ce076);
+            
+        
+
+        poly_line_95477ae4b0c532d8f7bfb4e18d2aee85.bindPopup(popup_852dcc1f03ecd194a0177bffa85cad10)
+        ;
+
+        
+    
+    
+            poly_line_95477ae4b0c532d8f7bfb4e18d2aee85.bindTooltip(
+                `<div>
+                     Abidjan ➔ Biafra (July 1969)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            poly_line_95477ae4b0c532d8f7bfb4e18d2aee85.setText(
+                " \u27a4 ",
+                {
+  "repeat": true,
+  "center": false,
+  "below": false,
+  "offset": 7,
+  "orientation": 0,
+  "attributes": {
+  "fill": "yellow",
+  "font-weight": "bold",
+  "font-size": "20px",
+},
+}
+            );
+        
+    
+            var layer_control_2a5a415823d723b7892d5e653ee1f761_layers = {
+                base_layers : {
+                    "cartodbpositron" : tile_layer_40806869389be03b4eb80ece7658e559,
+                },
+                overlays :  {
+                },
+            };
+            let layer_control_2a5a415823d723b7892d5e653ee1f761 = L.control.layers(
+                layer_control_2a5a415823d723b7892d5e653ee1f761_layers.base_layers,
+                layer_control_2a5a415823d723b7892d5e653ee1f761_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": true,
+  "autoZIndex": true,
+}
+            ).addTo(map_12c3c5765977a64ad3f1ba7fb4eb7ea9);
+
+        
+</script>
+</html>
