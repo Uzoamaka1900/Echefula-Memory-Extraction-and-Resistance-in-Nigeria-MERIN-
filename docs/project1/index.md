@@ -6,7 +6,7 @@ permalink: /project1/
 
 # Project 1: CLAIRE Archive
 
-Welcome to the **CLAIRE Archive** — *Cartographic Layered Archive of Indigenous Resistance and Extraction in Nigeria*.
+Welcome to the **CLAIRE Archive** — *Colonial Land Acquisition and Indigenous Resistance in Enugu, 1915-2004*.
 
 This collection explores how coal mining, land dispossession, and community displacement shaped Eastern Nigeria from the colonial period to the postcolonial present. CLAIRE maps out memory through crown land act, environmental impact records, and archival petitions to unearth narratives often buried beneath extractive infrastructures.
 
