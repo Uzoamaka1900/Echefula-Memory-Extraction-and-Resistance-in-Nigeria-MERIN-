@@ -1,77 +1,74 @@
 ---
-
 title: About
 layout: about
 permalink: /about.html
 credits: true
--------------
+---
 
 {% include feature/jumbotron.html objectid="drurylane" %}
 {% include feature/nav-menu.html sections="About the Collection;Introduction;Historical Background;My Intervention;About the Creator" %}
 
 # About the Collection
 
-### Introduction
+## Introduction
 
-This collection, *Echefùla: Memory, Extraction, and Resistance in Nigeria (MERIN)*, investigates the complex interactions between colonial authorities and indigenous communities in Eastern Nigeria from 1915 to 1940, focusing on land acquisition and community resistance in resource extraction zones. Drawing from digitized petitions, engineering reports, oral histories, and colonial maps, the collection explores the enduring legacies of mining violence and land dispossession. It is grounded in archival materials and community memory work and forms part of Uzoamaka Nwachukwu’s dissertation research.
+*Echefùla: Memory, Extraction, and Resistance in Nigeria (MERIN)* is a multi-sited digital archive that examines the entangled histories of colonial land acquisition, extractive violence, and indigenous resistance in Eastern Nigeria between 1915 and 1940. Through digitized petitions, engineering reports, oral testimonies, and colonial cartography, this collection reconstructs forgotten landscapes of contestation and ecological disruption. It is grounded in both archival evidence and collaborative community memory work and forms part of Uzoamaka Nwachukwu’s dissertation research.
 
-### Historical Background
+## Historical Background
 
-#### Colonial Expansion and Land Dispossession
+### Colonial Expansion and Land Dispossession
 
-The colonial administration’s push to extract coal from the Enugu region in the early 20th century marked a turning point in Nigeria’s resource governance. The Crown Lands Ordinance enabled mass expropriation of indigenous land, justifying colonial infrastructural expansion and extraction.
+The early 20th-century extraction of coal in Enugu was facilitated by the Crown Lands Ordinance, which sanctioned massive alienation of indigenous lands under colonial rule. This legal mechanism enabled infrastructural growth while simultaneously dispossessing local communities of their ancestral territories.
 
-#### Petitions as Tools of Resistance
+### Petitions as Tools of Resistance
 
-In response, indigenous communities petitioned colonial administrators to reclaim lost land, contest legal injustices, and demand compensation. From the 1915 land protest of Chief Onyeama to 1930s petitions from Ngwo chiefs over unused crown lands, these materials offer a counter-archive of resistance.
+Petitions emerged as critical tools for indigenous resistance. From Chief Onyeama’s 1915 land protest to the 1930s legal challenges by Ngwo communities, petitioners documented injustice, demanded compensation, and reclaimed political agency. These texts offer a counter-archive that highlights subaltern voices in colonial governance.
 
-#### Archival Methods and Digital Integration
+### Archival Methods and Digital Integration
 
-The collection draws on archives in Enugu, Ibadan, Kaduna, and key UK repositories (Kew, Oxford, Bristol, Liverpool). It uses:
+This project draws from archival repositories in Nigeria (Enugu, Ibadan, Kaduna) and the UK (Kew, Oxford, Bristol, Liverpool), employing:
 
-* Topic modeling (e.g., grievances, compensation, ecological degradation)
-* GIS mapping (to visualize land conflict and spatial change)
-* Interactive visualization (to engage users in understanding local perspectives on extraction)
+- **Topic modeling** to extract themes such as grievances, compensation, and ecological degradation
+- **GIS mapping** to visualize land conflicts, displacement, and spatial transformation
+- **Interactive visualizations** to center local narratives and epistemologies of extraction
 
 ---
 
-### My Intervention
+## My Intervention
 
-This project uses digital humanities tools to present and interpret community memory and environmental history from a bottom-up approach. It includes:
+Echefùla uses digital humanities tools to foreground bottom-up perspectives in environmental and social history. It is committed to accessible, participatory, and ethically-grounded knowledge production. Key platforms and tools include:
 
-* The *CLAIRE* platform: [abandonedminesnigeria.github.io/CLAIRE](https://abandonedminesnigeria.github.io/CLAIRE)
-* The *Communities and Mining in Nigeria* site: [communitiesandmininginnigeria.org](https://www.communitiesandmininginnigeria.org), which hosts the Mining Media Memory Map (1935–2025).
+- **[CLAIRE](https://abandonedminesnigeria.github.io/CLAIRE)**: A community-based cartographic archive of abandoned mines and land memory
+- **[Communities and Mining in Nigeria](https://www.communitiesandmininginnigeria.org)**: A participatory archive and home to the *Mining Media Memory Map (1935–2025)*
 
-Key interventions:
+### Core Contributions
 
-* **Digitization of primary sources** (petitions, maps, oral histories)
-* **Visualization tools**: timelines, word clouds, and maps
-* **Community-engaged workshops** that co-create historical “memory maps”
+- **Digitization of primary sources**: petitions, maps, and oral histories
+- **Visualization tools**: timelines, topic clusters, interactive maps
+- **Community-engaged memory workshops**: participatory mapping and co-curation
 
-The archive is built with CollectionBuilder and designed to honor the CARE and FAIR principles.
+This archive is built with CollectionBuilder and guided by the **CARE** and **FAIR** principles, prioritizing Indigenous data sovereignty, reuse, and transparency.
 
 ---
 
 # About the Creator
 
-Uzoamaka Nwachukwu is a doctoral researcher whose work sits at the intersection of environmental history, colonial extraction, and community memory. She applies GIS, metadata standards, and archival methods to create participatory knowledge infrastructures that document land, labor, and resistance histories. Her digital projects explore how African communities contest extractive afterlives and imagine just futures.
+Uzoamaka Nwachukwu is a historian and digital humanist whose research sits at the intersection of environmental history, extractive economies, and memory studies in Africa. Her work applies geospatial technologies, archival methods, and metadata curation to document contested landscapes and the lived afterlives of colonialism.
 
-### Academic Expertise
+## Academic Focus
 
-* Environmental justice and memory studies
-* Archival ethics and colonial governance
-* Digital cartography and Indigenous knowledge
+- Environmental justice and memory politics
+- Archival ethics and colonial governance
+- Digital cartography and Indigenous knowledge systems
 
-### Research Tools
+## Research Tools
 
-* GIS spatial analysis
-* Topic modeling and text mining
-* Oral history transcription and thematic metadata design
+- GIS spatial analysis and historical mapping
+- Text mining and topic modeling of archival materials
+- Oral history collection and metadata design
 
-### Vision
+## Vision
 
-Echefùla contributes to global discussions on postcolonial environmental repair. By linking archival sources to present-day community testimony, it generates a living record of resilience in the face of resource exploitation.
+Echefùla offers a living record of resistance, reclamation, and resilience. By bridging historical documents with contemporary testimony, it contributes to global conversations on postcolonial environmental repair and the politics of remembering.
 
 ---
-
-
