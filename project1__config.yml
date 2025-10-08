@@ -1,0 +1,22 @@
+---
+title: CLAIRE Archive
+
+layout: default
+
+permalink: /project1/
+---
+Content of project 1...
+
+tagline: Colonial Land Acquisitin and Indigenous Resistance in Enugu Nigeria
+
+baseurl: "/project1"
+
+description: "CLAIRE is a digital cartographic platform that documents the abandoned mines of Nigeria as environmental, social, and historical archives. "
+
+author: Uzoamaka Nwachukwu
+
+metadata: CLAIRE-metadata  # your corresponding metadata file
+
+exclude: [README.md, Rakefile, LICENSE]
+sass:
+  style: compressed

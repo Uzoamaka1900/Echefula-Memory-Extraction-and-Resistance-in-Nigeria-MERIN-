@@ -1,3 +1,31 @@
-title: Echefùla Archive
-baseurl: ""
-description: Multi-sited digital archive documenting Nigeria’s mining and resistance histories
+title: ECHEFULA: MEMORY, EXTRACTION AND RESISTANCE IN NIGERIA PROJECT
+baseurl: "" # leave blank if using main branch
+theme: minimal # or your selected theme
+
+collections:
+  projects:
+    output: true
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: default
+
+tagline: Memory and Extraction in Eastern 
+
+baseurl: ""  # ROOT site has an empty baseurl
+
+description: "A digital project exploring Nigeria’s mining history through archival fragments, oral memory, and community resistance across extractive landscapes"
+
+author: Uzoamaka Nwachukwu
+
+metadata: EXTRACTIVE LANDSCAPE-metadata  # matches your main CSV filename in _data/
+
+exclude: [README.md, Rakefile, LICENSE, /project1/, /project2/]  # exclude other CB sites
+sass:
+  style: compressed
+
+theme_banner_image: "/assets/img/Afterlife-of-Extraction.jpg"
